@@ -12,21 +12,19 @@ import welington.dsmovie.dto.MovieDTO;
 import welington.dsmovie.services.MovieService;
 
 @RestController
-@RequestMapping(value="/movies")
+@RequestMapping(value = "/movies")
 public class MovieController {
 
-	
 	@Autowired
 	private MovieService service;
 	
 	@GetMapping
-	public Page<MovieDTO> findAll(Pageable pegeable){
-		return service.findAll(pegeable);
+	public Page<MovieDTO> findAll(Pageable pageable) {
+		return service.findAll(pageable);
 	}
 	
-	@GetMapping(value="/{id}")
-	public MovieDTO findById(@PathVariable Long id){
+	@GetMapping(value = "/{id}")
+	public MovieDTO findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
-	
 }

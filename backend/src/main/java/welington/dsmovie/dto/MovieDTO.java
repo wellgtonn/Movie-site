@@ -3,18 +3,17 @@ package welington.dsmovie.dto;
 import welington.dsmovie.entities.Movie;
 
 public class MovieDTO {
-	
+
 	private Long id;
 	private String title;
 	private Double score;
 	private Integer count;
 	private String image;
 	
-	public  MovieDTO() {
+	public MovieDTO() {
 	}
 
 	public MovieDTO(Long id, String title, Double score, Integer count, String image) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.score = score;
@@ -23,7 +22,6 @@ public class MovieDTO {
 	}
 	
 	public MovieDTO(Movie movie) {
-		super();
 		id = movie.getId();
 		title = movie.getTitle();
 		score = movie.getScore();
@@ -70,5 +68,4 @@ public class MovieDTO {
 	public void setImage(String image) {
 		this.image = image;
 	}
-
 }
