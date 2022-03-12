@@ -27,10 +27,12 @@ function Listing() {
         setPage(data)
       })
   }, [pageNumber])
-
+  const handlePageChage = (newPageNumber: number) => {
+    setPageNumber(newPageNumber)
+  }
   return (
     <>
-      <Pagination />
+      <Pagination page={page} onChange={handlePageChage} />
 
       <div className="container">
         <div className="row">
